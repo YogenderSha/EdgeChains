@@ -3,7 +3,6 @@ package com.edgechain.service;
 import com.edgechain.lib.configuration.EdgeChainAutoConfiguration;
 import com.edgechain.service.constants.ServiceConstants;
 import java.io.File;
-import java.io.FileInputStream;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
