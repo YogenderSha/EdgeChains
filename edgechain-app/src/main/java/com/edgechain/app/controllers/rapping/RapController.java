@@ -23,10 +23,13 @@ public class RapController {
 
   private static final String OPENAI_CHAT_COMPLETION_API =
       "https://api.openai.com/v1/chat/completions";
-  @Autowired private PromptService promptService;
-  @Autowired private PluginService pluginService;
+ @Autowired
+public RapController(PromptService promptService, PluginService pluginService, OpenAiService openAiService) {
+    this.promptService = promptService;
+    this.pluginService = pluginService;
+    this.openAiService = openAiService;
+}
 
-  @Autowired private OpenAiService openAiService;
 
   @GetMapping("/rap")
   public Mono<ChainResponse> getRap(@RequestParam("query") String query) {
